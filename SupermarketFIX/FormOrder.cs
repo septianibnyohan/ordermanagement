@@ -140,5 +140,34 @@ namespace SupermarketFIX
             gridOrder.Refresh();
             GetTransNo();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //foreach (DataGridViewRow row in gridOrder.Rows)
+            //{
+            //    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells[5];
+
+            //    if (chk.Value == chk.TrueValue)
+            //    {
+            //        gridOrder.Rows.Remove(row);
+            //    }
+            //}
+
+            for (int i = 0; i < gridOrder.Rows.Count; i++)
+            {
+
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)gridOrder.Rows[i].Cells[5];
+
+                if (chk.Value != null)
+                {
+                    DataGridViewRow dgvDelRow = gridOrder.Rows[i];
+                    gridOrder.Rows.RemoveAt(i);
+                }
+            }
+
+            gridOrder.Refresh();
+
+        }
+            
     }
 }

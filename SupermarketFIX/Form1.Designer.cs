@@ -32,9 +32,10 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crystalReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,21 +65,29 @@
             // produkToolStripMenuItem
             // 
             this.produkToolStripMenuItem.Name = "produkToolStripMenuItem";
-            this.produkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produkToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.produkToolStripMenuItem.Text = "Product";
             this.produkToolStripMenuItem.Click += new System.EventHandler(this.produkToolStripMenuItem_Click);
             // 
             // customerToolStripMenuItem
             // 
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.customerToolStripMenuItem.Text = "Customer";
             this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
+            // 
+            // orderToolStripMenuItem
+            // 
+            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.orderToolStripMenuItem.Text = "Order";
+            this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
             // 
             // reportingToolStripMenuItem
             // 
             this.reportingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crystalReportToolStripMenuItem});
+            this.crystalReportToolStripMenuItem,
+            this.productReportToolStripMenuItem});
             this.reportingToolStripMenuItem.Name = "reportingToolStripMenuItem";
             this.reportingToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.reportingToolStripMenuItem.Text = "Reporting";
@@ -87,15 +96,15 @@
             // 
             this.crystalReportToolStripMenuItem.Name = "crystalReportToolStripMenuItem";
             this.crystalReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.crystalReportToolStripMenuItem.Text = "Crystal Report";
+            this.crystalReportToolStripMenuItem.Text = "Order Report";
             this.crystalReportToolStripMenuItem.Click += new System.EventHandler(this.crystalReportToolStripMenuItem_Click);
             // 
-            // orderToolStripMenuItem
+            // productReportToolStripMenuItem
             // 
-            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.orderToolStripMenuItem.Text = "Order";
-            this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
+            this.productReportToolStripMenuItem.Name = "productReportToolStripMenuItem";
+            this.productReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productReportToolStripMenuItem.Text = "Product Report";
+            this.productReportToolStripMenuItem.Click += new System.EventHandler(this.productReportToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -124,6 +133,7 @@
         private System.Windows.Forms.ToolStripMenuItem crystalReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productReportToolStripMenuItem;
     }
 }
 

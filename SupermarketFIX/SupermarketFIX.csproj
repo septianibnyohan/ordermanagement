@@ -116,6 +116,12 @@
     <Compile Include="FormRptList.Designer.cs">
       <DependentUpon>FormRptList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRptProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRptProduct.Designer.cs">
+      <DependentUpon>FormRptProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
       <DependentUpon>crptOrderList.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReportGenerator\CrystalReport\crptProduct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReportGenerator\DataSet\dsOrder.cs">
       <DependentUpon>dsOrder.xsd</DependentUpon>
     </Compile>
@@ -158,6 +170,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerator\DataSet\dsProduct.cs">
+      <DependentUpon>dsProduct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerator\DataSet\dsProduct.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProduct.xsd</DependentUpon>
     </Compile>
     <Compile Include="tbl_Login.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
@@ -172,9 +192,16 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRptProduct.resx">
+      <DependentUpon>FormRptProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportGenerator\CrystalReport\crptOrderList.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crptOrderList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenerator\CrystalReport\crptProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptProduct.cs</LastGenOutput>
     </EmbeddedResource>
     <EntityDeploy Include="ModelDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -231,6 +258,17 @@
     </None>
     <None Include="ReportGenerator\DataSet\dsOrder.xss">
       <DependentUpon>dsOrder.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerator\DataSet\dsProduct.xsc">
+      <DependentUpon>dsProduct.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerator\DataSet\dsProduct.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProduct.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerator\DataSet\dsProduct.xss">
+      <DependentUpon>dsProduct.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

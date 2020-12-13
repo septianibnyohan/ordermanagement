@@ -119,5 +119,25 @@ namespace SupermarketFIX
                 f4.Show();
             }
         }
+
+        private void productReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "FormRptProduct")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                FormRptProduct f4 = new FormRptProduct();
+                f4.MdiParent = this;
+                f4.Show();
+            }
+        }
     }
 }
