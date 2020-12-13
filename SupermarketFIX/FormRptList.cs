@@ -20,6 +20,13 @@ namespace SupermarketFIX
 
         private void crvList_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            var transno = txtTransNo.Text;
+
             //Declare Datatable
             DataTable order = new DataTable();
             order.Columns.Add("TransNo", typeof(string));
@@ -33,7 +40,7 @@ namespace SupermarketFIX
             //Insert Test Rows
             using (var context = new SuperEntities())
             {
-                var list_order = context.Orders.ToList();
+                var list_order = context.Orders.Where(o => o.TransNo == transno).ToList();
                 foreach (var data in list_order)
                 {
                     var product_name = context.ProductInfo_Tab.FirstOrDefault(o => o.ProductID == data.ProductId).itemName;
