@@ -45,6 +45,8 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblTransno = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).BeginInit();
@@ -166,11 +168,35 @@
             this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // lblTransno
+            // 
+            this.lblTransno.AutoSize = true;
+            this.lblTransno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransno.Location = new System.Drawing.Point(713, 48);
+            this.lblTransno.Name = "lblTransno";
+            this.lblTransno.Size = new System.Drawing.Size(176, 16);
+            this.lblTransno.TabIndex = 4;
+            this.lblTransno.Tag = "";
+            this.lblTransno.Text = "000000000000000000000000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(607, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Tag = "";
+            this.label2.Text = "Transaction No";
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1445, 792);
+            this.Controls.Add(this.lblTransno);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.gridOrder);
             this.Controls.Add(this.gridProduct);
             this.Controls.Add(this.gridCustomer);
@@ -181,13 +207,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gridCustomer;
-        private System.Windows.Forms.DataGridView gridProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
@@ -196,12 +220,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewLinkColumn Action;
-        private System.Windows.Forms.DataGridView gridOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceTotal;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+        public System.Windows.Forms.DataGridView gridCustomer;
+        public System.Windows.Forms.DataGridView gridProduct;
+        public System.Windows.Forms.DataGridView gridOrder;
+        private System.Windows.Forms.Label lblTransno;
+        private System.Windows.Forms.Label label2;
     }
 }

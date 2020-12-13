@@ -12,14 +12,15 @@ namespace SupermarketFIX
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductInfo_Tab
+    public partial class Order
     {
-        public int ProductID { get; set; }
-        public string itemName { get; set; }
-        public string Categories { get; set; }
-        public Nullable<System.DateTime> insertDate { get; set; }
-        public Nullable<System.DateTime> UpdateDate { get; set; }
-        public Nullable<System.DateTime> ExpiryDate { get; set; }
+        public int Id { get; set; }
+        public string TransNo { get; set; }
+        public Nullable<int> ProductId { get; set; }
         public Nullable<decimal> Price { get; set; }
+        public Nullable<int> Qty { get; set; }
+        public Nullable<decimal> Total { get; set; }
+        public Nullable<System.DateTime> SDate { get; set; }
+        public string Status { get; set; }
     }
 }

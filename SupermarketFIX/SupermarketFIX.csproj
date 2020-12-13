@@ -110,6 +110,12 @@
     <Compile Include="FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQty.Designer.cs">
+      <DependentUpon>frmQty.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -124,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductInfo_Tab.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
@@ -162,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQty.resx">
+      <DependentUpon>frmQty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
