@@ -1,0 +1,207 @@
+﻿namespace SupermarketFIX
+{
+    partial class FormOrder
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gridCustomer = new System.Windows.Forms.DataGridView();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridProduct = new System.Windows.Forms.DataGridView();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.gridOrder = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gridCustomer
+            // 
+            this.gridCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CustomerID,
+            this.Fullname,
+            this.Email,
+            this.Address});
+            this.gridCustomer.Location = new System.Drawing.Point(12, 48);
+            this.gridCustomer.Name = "gridCustomer";
+            this.gridCustomer.Size = new System.Drawing.Size(569, 341);
+            this.gridCustomer.TabIndex = 0;
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.HeaderText = "Customer ID";
+            this.CustomerID.Name = "CustomerID";
+            // 
+            // Fullname
+            // 
+            this.Fullname.HeaderText = "Fullname";
+            this.Fullname.Name = "Fullname";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            // 
+            // gridProduct
+            // 
+            this.gridProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductID,
+            this.ItemName,
+            this.Category,
+            this.Action});
+            this.gridProduct.Location = new System.Drawing.Point(12, 443);
+            this.gridProduct.Name = "gridProduct";
+            this.gridProduct.Size = new System.Drawing.Size(569, 337);
+            this.gridProduct.TabIndex = 1;
+            this.gridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProduct_CellContentClick);
+            // 
+            // ProductID
+            // 
+            this.ProductID.HeaderText = "Product ID";
+            this.ProductID.Name = "ProductID";
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Item Name";
+            this.ItemName.Name = "ItemName";
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            // 
+            // Action
+            // 
+            this.Action.HeaderText = "Action";
+            this.Action.Name = "Action";
+            this.Action.Text = "Select";
+            // 
+            // gridOrder
+            // 
+            this.gridOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.ProductName,
+            this.Price,
+            this.Quantity,
+            this.PriceTotal,
+            this.Select});
+            this.gridOrder.Location = new System.Drawing.Point(610, 443);
+            this.gridOrder.Name = "gridOrder";
+            this.gridOrder.Size = new System.Drawing.Size(809, 291);
+            this.gridOrder.TabIndex = 2;
+            this.gridOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridOrder_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Product ID";
+            this.ID.Name = "ID";
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // PriceTotal
+            // 
+            this.PriceTotal.HeaderText = "PriceTotal";
+            this.PriceTotal.Name = "PriceTotal";
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // FormOrder
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1445, 792);
+            this.Controls.Add(this.gridOrder);
+            this.Controls.Add(this.gridProduct);
+            this.Controls.Add(this.gridCustomer);
+            this.Name = "FormOrder";
+            this.Text = "FormOrder";
+            this.Load += new System.EventHandler(this.FormOrder_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView gridCustomer;
+        private System.Windows.Forms.DataGridView gridProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewLinkColumn Action;
+        private System.Windows.Forms.DataGridView gridOrder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceTotal;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+    }
+}
