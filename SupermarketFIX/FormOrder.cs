@@ -34,7 +34,8 @@ namespace SupermarketFIX
                 int count;
                 using (var context = new SuperEntities())
                 {
-                    var order = (from ord in context.Orders where ord.TransNo.Contains(sdate) select ord).FirstOrDefault();
+                    var order = (from ord in context.Orders where ord.TransNo.Contains(sdate) 
+                                 orderby ord.Id descending select ord).FirstOrDefault();
                     if (order != null)
                     {
                         transno = order.TransNo;
@@ -105,6 +106,39 @@ namespace SupermarketFIX
                 }
             }
         }
-        
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var transno = lblTransno.Text;
+            var customerid = gridCustomer.CurrentRow.Cells[0];
+            using (var context = new SuperEntities())
+            {
+                foreach (DataGridViewRow row in gridOrder.Rows)
+                {
+                    if (row.IsNewRow) continue;
+                    var product_id = row.Cells[0].Value.ToString();
+                    var item_name = row.Cells[1].Value.ToString();
+                    var price = row.Cells[2].Value.ToString();
+                    var quantity = row.Cells[3].Value.ToString();
+                    var price_total = row.Cells[4].Value.ToString();
+
+                    var order = new Order();
+                    order.TransNo = transno;
+                    order.ProductId = int.Parse(product_id);
+                    order.Price = int.Parse(price);
+                    order.Qty = int.Parse(quantity);
+                    order.Total = int.Parse(price_total);
+                    order.SDate = DateTime.Now;
+
+                    context.Orders.Add(order);
+                    context.SaveChanges();
+                }
+                
+            }
+
+            gridOrder.Rows.Clear();
+            gridOrder.Refresh();
+            GetTransNo();
+        }
     }
 }

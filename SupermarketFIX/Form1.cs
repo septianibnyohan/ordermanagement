@@ -84,7 +84,7 @@ namespace SupermarketFIX
             bool IsOpen = false;
             foreach (Form f in Application.OpenForms)
             {
-                if (f.Text == "Form6")
+                if (f.Name == "FormRptList")
                 {
                     IsOpen = true;
                     f.Focus();
@@ -93,7 +93,7 @@ namespace SupermarketFIX
             }
             if (IsOpen == false)
             {
-                Form6 f6 = new Form6();
+                FormRptList f6 = new FormRptList();
                 f6.MdiParent = this;
                 f6.Show();
             }

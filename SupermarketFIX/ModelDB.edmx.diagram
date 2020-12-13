@@ -7,8 +7,8 @@
       <Diagram DiagramId="5ff3e0d0976b4e238ed9c7d563829f64" Name="Diagram1">
         <EntityTypeShape EntityType="SupermarketModel.Customer" PointX="0.75" PointY="3.75" Width="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SupermarketModel.tbl_Login" PointX="0.75" PointY="0.75" Width="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SupermarketModel.Order" Width="1.5" PointX="3.375" PointY="4.75" />
         <EntityTypeShape EntityType="SupermarketModel.ProductInfo_Tab" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SupermarketModel.Order" Width="1.5" PointX="3.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

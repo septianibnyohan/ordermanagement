@@ -74,3 +74,4 @@ D:\ProjectDev\SupermarketFIX\SupermarketFIX\bin\Debug\CrystalDecisions.Windows.F
 D:\ProjectDev\SupermarketFIX\SupermarketFIX\obj\Debug\SupermarketFIX.Form4.resources
 D:\ProjectDev\SupermarketFIX\SupermarketFIX\obj\Debug\SupermarketFIX.FormOrder.resources
 D:\ProjectDev\SupermarketFIX\SupermarketFIX\obj\Debug\SupermarketFIX.frmQty.resources
+D:\ProjectDev\SupermarketFIX\SupermarketFIX\obj\Debug\SupermarketFIX.FormRptList.resources

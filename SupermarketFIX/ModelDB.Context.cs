@@ -27,7 +27,7 @@ namespace SupermarketFIX
     
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<tbl_Login> tbl_Login { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<ProductInfo_Tab> ProductInfo_Tab { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
     }
 }

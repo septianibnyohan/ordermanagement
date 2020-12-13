@@ -9,8 +9,6 @@
     <Property Name="Email" Type="varchar" MaxLength="100" />
     <Property Name="Address" Type="nvarchar" MaxLength="125" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="Id" />
@@ -46,19 +44,8 @@ warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key
   </EntityType>
   <EntityContainer Name="SupermarketModelStoreContainer">
     <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductInfo_Tab" EntityType="Self.ProductInfo_Tab" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbl_Login" EntityType="Self.tbl_Login" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Order" EntityType="Self.Order" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Order].[Id] AS [Id], 
-    [Order].[TransNo] AS [TransNo], 
-    [Order].[ProductId] AS [ProductId], 
-    [Order].[Price] AS [Price], 
-    [Order].[Qty] AS [Qty], 
-    [Order].[Total] AS [Total], 
-    [Order].[SDate] AS [SDate], 
-    [Order].[Status] AS [Status]
-    FROM [dbo].[Order] AS [Order]</DefiningQuery>
-    </EntitySet>
   </EntityContainer>
 </Schema>

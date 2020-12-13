@@ -110,6 +110,12 @@
     <Compile Include="FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRptList.Designer.cs">
+      <DependentUpon>FormRptList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGenerator\CrystalReport\crptOrderList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptOrderList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportGenerator\DataSet\dsOrder.cs">
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerator\DataSet\dsOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Login.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
@@ -151,6 +171,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenerator\CrystalReport\crptOrderList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptOrderList.cs</LastGenOutput>
     </EmbeddedResource>
     <EntityDeploy Include="ModelDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -171,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRptList.resx">
+      <DependentUpon>FormRptList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQty.resx">
       <DependentUpon>frmQty.cs</DependentUpon>
@@ -194,6 +221,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReportGenerator\DataSet\dsOrder.xsc">
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerator\DataSet\dsOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOrder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerator\DataSet\dsOrder.xss">
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -215,6 +253,7 @@
       <LastGenOutput>ModelDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

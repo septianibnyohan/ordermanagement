@@ -14,8 +14,6 @@
           <Property Name="Email" Type="varchar" MaxLength="100" />
           <Property Name="Address" Type="nvarchar" MaxLength="125" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="Id" />
@@ -51,20 +49,9 @@ warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key
         </EntityType>
         <EntityContainer Name="SupermarketModelStoreContainer">
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductInfo_Tab" EntityType="Self.ProductInfo_Tab" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Login" EntityType="Self.tbl_Login" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Order" EntityType="Self.Order" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Order].[Id] AS [Id], 
-    [Order].[TransNo] AS [TransNo], 
-    [Order].[ProductId] AS [ProductId], 
-    [Order].[Price] AS [Price], 
-    [Order].[Qty] AS [Qty], 
-    [Order].[Total] AS [Total], 
-    [Order].[SDate] AS [SDate], 
-    [Order].[Status] AS [Status]
-    FROM [dbo].[Order] AS [Order]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -90,9 +77,21 @@ warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key
         <EntityContainer Name="SuperEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="tbl_Login" EntityType="Self.tbl_Login" />
-          <EntitySet Name="Orders" EntityType="SupermarketModel.Order" />
           <EntitySet Name="ProductInfo_Tab" EntityType="SupermarketModel.ProductInfo_Tab" />
+          <EntitySet Name="Orders" EntityType="SupermarketModel.Order" />
         </EntityContainer>
+        <EntityType Name="ProductInfo_Tab">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="itemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Categories" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="insertDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+        </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="Id" />
@@ -105,18 +104,6 @@ warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key
           <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="SDate" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="ProductInfo_Tab">
-          <Key>
-            <PropertyRef Name="ProductID" />
-          </Key>
-          <Property Name="ProductID" Type="Int32" Nullable="false" />
-          <Property Name="itemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Categories" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="insertDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -143,6 +130,19 @@ warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ProductInfo_Tab">
+            <EntityTypeMapping TypeName="SupermarketModel.ProductInfo_Tab">
+              <MappingFragment StoreEntitySet="ProductInfo_Tab">
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+                <ScalarProperty Name="Categories" ColumnName="Categories" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="itemName" ColumnName="itemName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="SupermarketModel.Order">
               <MappingFragment StoreEntitySet="Order">
@@ -154,19 +154,6 @@ warning 6002: The table/view 'Supermarket.dbo.Order' does not have a primary key
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="TransNo" ColumnName="TransNo" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ProductInfo_Tab">
-            <EntityTypeMapping TypeName="SupermarketModel.ProductInfo_Tab">
-              <MappingFragment StoreEntitySet="ProductInfo_Tab">
-                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="insertDate" ColumnName="insertDate" />
-                <ScalarProperty Name="Categories" ColumnName="Categories" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="itemName" ColumnName="itemName" />
-                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
