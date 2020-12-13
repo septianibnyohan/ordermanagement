@@ -37,14 +37,15 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -150,12 +151,28 @@
             this.comboBox1.Size = new System.Drawing.Size(233, 21);
             this.comboBox1.TabIndex = 6;
             // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(114, 100);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(233, 20);
+            this.txtPrice.TabIndex = 4;
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(114, 65);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(233, 20);
             this.textBox2.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Price";
             // 
             // label4
             // 
@@ -200,28 +217,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(526, 170);
             this.dataGridView1.TabIndex = 2;
             // 
-            // label6
+            // btnExport
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Price";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(114, 100);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(233, 20);
-            this.txtPrice.TabIndex = 4;
+            this.btnExport.Location = new System.Drawing.Point(24, 489);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(87, 23);
+            this.btnExport.TabIndex = 3;
+            this.btnExport.Text = "Export To CSV";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(574, 495);
+            this.ClientSize = new System.Drawing.Size(574, 519);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -256,5 +268,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnExport;
     }
 }

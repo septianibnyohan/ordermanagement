@@ -68,10 +68,11 @@ namespace SupermarketFIX
                 var product_id = Convert.ToInt32(gridProduct.Rows[e.RowIndex].Cells[0].Value.ToString());
                 var item_name = gridProduct.Rows[e.RowIndex].Cells[1].Value.ToString();
                 var category = gridProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
+                var price = Convert.ToInt32(gridProduct.Rows[e.RowIndex].Cells[3].Value.ToString());
 
                 //gridOrder.Rows.Add(product_id, item_name, 0, 0, 0);
                 frmQty frm = new frmQty(this);
-                frm.ProductDetails(product_id, item_name, 1000);
+                frm.ProductDetails(product_id, item_name, price);
                 frm.ShowDialog();
             }
             using (var context = new SuperEntities())
@@ -100,7 +101,7 @@ namespace SupermarketFIX
                 foreach (var product in products)
                 {
                     //++index;
-                    gridProduct.Rows.Add(product.ProductID, product.itemName, product.Categories, "Select");
+                    gridProduct.Rows.Add(product.ProductID, product.itemName, product.Categories, product.Price, "Select");
                 }
             }
         }

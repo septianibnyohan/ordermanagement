@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace SupermarketFIX
@@ -100,6 +102,23 @@ namespace SupermarketFIX
                 MessageBox.Show("Successfully deleted.");
                 loadData();
             }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            var list_data = (from s in db.ProductInfo_Tab select s);
+
+            var csv = new StringBuilder();
+            var newLine = string.Format("{0},{1},{2},{3},{4}", "ID", "Name", "Price", "Category", "Expiry Date");
+            csv.AppendLine(newLine);
+
+            foreach (var data in list_data)
+            {
+                var newLine2 = string.Format("{0},{1},{2},{3},{4}", data.ProductID, data.itemName, data.Price, data.Categories, data.ExpiryDate);
+                csv.AppendLine(newLine2);
+            }
+
+            File.WriteAllText("productresult.csv", csv.ToString());
         }
     }
 }

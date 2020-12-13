@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace SupermarketFIX
@@ -216,6 +218,27 @@ namespace SupermarketFIX
             {
                 customerBindingSource.DataSource = supermarket.Customers.ToList();
             }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            using (var db = new SuperEntities())
+            {
+                var list_data = (from s in db.Customers select s);
+
+                var csv = new StringBuilder();
+                var newLine = string.Format("{0},{1},{2},{3}", "Customer ID", "Fullname", "Email", "Address");
+                csv.AppendLine(newLine);
+
+                foreach (var data in list_data)
+                {
+                    var newLine2 = string.Format("{0},{1},{2},{3}", data.CustomerID, data.FullName, data.Email, data.Address);
+                    csv.AppendLine(newLine2);
+                }
+
+                File.WriteAllText("customerresult.csv", csv.ToString());
+            }
+            
         }
     }
 }
