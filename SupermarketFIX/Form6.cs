@@ -17,6 +17,12 @@ namespace SupermarketFIX
             InitializeComponent();
         }
 
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            CrystalReport2 rptTest = new CrystalReport2();
+            crystalReportViewer1.ReportSource = rptTest;
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -31,5 +37,7 @@ namespace SupermarketFIX
         {
 
         }
+
+        
     }
 }

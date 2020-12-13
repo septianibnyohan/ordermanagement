@@ -34,11 +34,13 @@ namespace SupermarketFIX
             int prodid = int.Parse(textBox1.Text);
             string itemame = textBox2.Text, categories = comboBox1.Text;
             DateTime expirydate = DateTime.Parse(dateTimePicker1.Text);
+            int price = int.Parse(txtPrice.Text);
 
             var st = new ProductInfo_Tab
             {
                 ProductID = prodid,
                 itemName = itemame,
+                Price = price,
                 Categories = categories,
                 insertDate = DateTime.Now,
                 ExpiryDate = expirydate,
@@ -67,8 +69,10 @@ namespace SupermarketFIX
             string itemame = textBox2.Text, categories = comboBox1.Text;
             DateTime expirydate = DateTime.Parse(dateTimePicker1.Text);
             var product_id = int.Parse(textBox1.Text);
+            int price = int.Parse(txtPrice.Text);
             var st = (from s in db.ProductInfo_Tab where s.ProductID == product_id select s).First();
             st.itemName = itemame;
+            st.Price = price;
             st.Categories = categories;
             st.UpdateDate = DateTime.Now;
             st.ExpiryDate = expirydate;

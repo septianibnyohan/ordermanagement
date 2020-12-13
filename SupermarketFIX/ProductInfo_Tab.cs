@@ -16,10 +16,10 @@ namespace SupermarketFIX
     {
         public int ProductID { get; set; }
         public string itemName { get; set; }
+        public Nullable<decimal> Price { get; set; }
         public string Categories { get; set; }
         public Nullable<System.DateTime> insertDate { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public Nullable<System.DateTime> ExpiryDate { get; set; }
-        public Nullable<decimal> Price { get; set; }
     }
 }

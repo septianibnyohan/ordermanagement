@@ -1,0 +1,209 @@
+STEP 1 :
+1
+10. menit 5
+
+STEP 2 :
+1. open project
+2. get link
+https://www.youtube.com/watch?v=iqaP4uLYKPQ
+3. watch youtube complete
+4. list
+	- login
+	- manage products
+		- new products
+		- update product
+	- manage categories
+	- manage customer
+	- manage order
+		- new customer
+		- customer orders
+		- quantity product order
+	- manager users
+	
+STEP 3 :
+1. get user access
+https://member.jagoanhosting.com/index.php?m=beon_custom_pages&action=redirect-cpanel-share&id=0j0d06tyceptqmxbrifgwmpksmnawukzha2uoaxzmesccfesd2j
+user : dewisetiowati12@gmail.com
+pass : Saya123
+2. try access
+3. open phpmyadmin
+4. open fileexplorer
+5. determine database
+6, determine fileexplorer
+7. download database
+8. donwload file
+9. import file
+10.import database
+
+STEP 4 :
+1. fix insert product
+2. fix update product
+3. fix search product
+4. fix delete product
+5. fix view product
+6. fix new customer
+7. fix edit customer
+8. fix cancel
+9. fix save
+10.fix view
+
+STEP 5 
+1. complete
+
+step 6 :
+1. 
+8. 8 menit
+var IPFS = require("ipfs-mini");
+const ipfs = new IPFS({host:'ipfs.infura.io',port:5001, protocol:'https'});
+const data = "some string that we want to save to the infura IPFS";
+ipfs.add(data, (err, hash) => {
+    if(err){
+        return console.log(err);
+    }
+    console.log('https://ipfs.infura.io/ipfs/'+hash);
+});
+9. global
+10.analyze get certificate
+http://e-learning2.absyak-learning.com/indexmahasiswa.php?p=laporan&id=80&nim=1351910003
+
+STEP 7 :
+1. enable panel
+2. change text insert
+3. fix logic insert
+4. change edit to update
+5. fix logic update
+6. change cancel search
+7. fix search
+8. change save to delete
+9. fix deleete
+10.learn form order
+
+nidn nidn
+
+"The property 'CustomerID' is part of the object's key information and cannot be modified. "
+
+STEP 8 :
+1. create empty form
+2. search link ppob
+3. download ppob
+4. open pos
+5. configureate pos until open
+6. check form grid
+7. check grid
+8. learn bind grid
+9. add grid 1
+10.add grid 2
+
+STEP 9:
+1. blockchain
+
+STEP 10 :
+1. fix column grid customer
+2. fix column grid product
+3. learn how to bind
+int i = 0;
+dataGridView1.Rows.Clear();
+cn.Open();
+cm = new SQLiteCommand("Select p.pcode, p.barcode, p.pdesc, b.brand, c.category, p.price, p.qty from tblProduct as p inner join tblBrand as b on b.id = p.bid inner join tblCategory as c on c.id = p.cid where p.pdesc like '" + txtSearch.Text + "%'", cn);
+dr = cm.ExecuteReader();
+while (dr.Read())
+{
+	i++;
+	dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
+}
+cn.Close();
+}
+4. create function for bind
+5. do bind customer
+6. do bind product
+7. test until complete
+8. add hyperlink select
+9. learn get selection in source code
+10.learn get selection  in internet
+
+step 10 
+
+CustomerID
+FullName
+Email
+Address
+
+ProductID
+itemName
+Categories
+insertDate
+updateDate
+ExpiryDate
+
+https://www.youtube.com/watch?v=dktIzcht_z4
+
+STEP 11 :
+1. identify variable
+2. create table
+3. update model
+4. add griview transaksi
+5. add column
+6. learn event
+7. create function
+8. implement event
+9. implement if
+10.complete
+
+STEP 12 ; menit 20
+
+STEP 13 :
+1. open youtube
+2. search top
+3. learn 
+	frmQty frm = new frmQty(this)
+	frm.ShowDialog()
+4. create form
+5. implement form quantity
+6. add price on product
+7. identity variable
+8. create table
+9. update model
+10.identify customer field
+
+STEP 14 :
+1. search video
+2. learn
+
+if ((e.KeyChar==13) && (txtQty.Text != String.Empty))
+
+3. implement function
+4. add to grid when enter
+5. destroy when enter
+6. open simplepos
+7. learn how to create transactionno
+8. create label
+9. compose generate invoice no core
+10.complete generate invoice no
+
+step 15 : menit 30
+
+STEP 16 : cr menit 10
+
+
+https://www.youtube.com/playlist?list=PLjC4UKOOcfDRRVmw4TNmBOTG95C1OpASu
+https://www.youtube.com/watch?v=SkMH0WeRYtg&t=823s
+
+steo 7
+7. complete 
+
+step 18 : menit 40
+npm install --save ipfs-http-client
+
+STEP 19 : watch part 1
+
+STEP 20:
+1. open simplepos
+2. learn text character
+3. implement
+4. implement field price
+5. implement price when insert
+6. implement price when update
+7. implement price when grid
+8. implement price when 
+9. add button insert order
+10.complete insert order
